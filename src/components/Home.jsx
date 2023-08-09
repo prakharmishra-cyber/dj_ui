@@ -514,11 +514,11 @@ const Home = () => {
 
 
             {/*Navigation Bar 2 bg-[#1cb5b2]*/}
-            {welcomeShow ? (
+            {welcomeShow && false ? (
                 <div className="fixed bottom-0 z-10 bg-gray-50 rounded-none text-red-800 flex overflow-x-hidden  mx-auto mt-2 border-2 border-gray-100 w-full overflow-y-hidden">
                     <div className="flex flex-row justify-around items-center w-full py-1 text-xs font-normal">
                         <div className='cursor-pointer mx-2 flex flex-col justify-center items-center'>
-                            <img src={Home} alt="online" className='w-6' />
+                            <img src={home} alt="online" className='w-6' />
                             <div>Home</div>
                         </div>
 

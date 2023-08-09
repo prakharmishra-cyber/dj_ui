@@ -65,6 +65,22 @@ const customStyles = {
     },
 };
 
+const customStyles2 = {
+    content: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+        position: 'relative',
+        border: 'none',
+        padding: 0,
+        width: '97%',
+        borderRadius: '16px'
+    },
+};
+
 const ShortPlans = () => {
 
     const navigate = useNavigate();
@@ -79,6 +95,7 @@ const ShortPlans = () => {
     const [originalwpwd, setOriginalwpwd] = useState(null);
     const [originalpwd, setOriginalpwd] = useState(null);
     const [planPurchaseShow, setPlanPurchaseShow] = useState(false);
+    const [balanceIndicator, setBalanceIndicator] = useState(false);
 
     const toaster = (text, arg = '') => {
         setToasterText(text);
@@ -119,14 +136,27 @@ const ShortPlans = () => {
         } else if (quantity <= 0) {
             toaster('Please a positive value!');
         } else {
-            if ((Number(quantity) * Number(currPlan.plan_amount)) > Number(userDetails.balance)) {
-                toaster("You don't have enough balance to make this purchase");
-            } else {
+            if ((Number(quantity) * Number(currPlan.plan_amount)) > Number(userDetails.recharge_amount)) {
+                //toaster("The available balance is insufficient, please recharge");
+                setBalanceIndicator(true);
+                setTimeout(() => {
+                    setBalanceIndicator(false);
+                }, 3000);
+            }
+            else if(userDetails.plans_purchased.filter(e=>e.plan_name==='HR Vitals 1').length>0) {
+                toaster('You can only purchase this plan once');
+                return;
+            } 
+            else {
                 await axios.post(`${BASE_URL}/purchase`, {
-                    balance: Number(userDetails.balance) - Number(Number(quantity) * Number(currPlan.plan_amount)),
+                    recharge_amount: Number(userDetails.recharge_amount) - Number(Number(quantity) * Number(currPlan.plan_amount)),
                     boughtLong: (currPlan.product_type === 'long' ? 1 : 0),
                     boughtShort: (currPlan.product_type === 'short' ? 1 : 0),
                     user_id: localStorage.getItem('uid'),
+                    parent_id: userDetails.parent_id,
+                    grand_parent_id: userDetails.grand_parent_id,
+                    great_grand_parent_id: userDetails.great_grand_parent_id,
+                    plan_price: currPlan.plan_amount,
                     plans_purchased: {
                         ...currPlan,
                         quantity: quantity,
@@ -147,6 +177,7 @@ const ShortPlans = () => {
             setIsOpen(false);
         }
     }
+
 
     const isBetween = () => {
         var startTime = '9:00:00';
@@ -193,6 +224,19 @@ const ShortPlans = () => {
                     <div className='text-2xl font-extrabold'>Successful Purchase</div>
                 </div>
             </div> : null}
+
+            <div >
+                <ReactModal
+                    isOpen={balanceIndicator}
+                    style={customStyles2}
+                    contentLabel="Not enough balance"
+                    ariaHideApp={false}
+                >
+                    <div className='relative bg-black text-center text-white opacity-90 p-2 w-full rounded-md '>
+                        The available balance is insufficient, please recharge
+                    </div>
+                </ReactModal>
+            </div>
 
             <div className='bg-confirm py-3 shadow-lg px-3 m-3 rounded-md flex justify-center items-center'>
                 <div className='text-white text-sm'>HR Vitals-Products</div>
