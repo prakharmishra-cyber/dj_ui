@@ -69,11 +69,11 @@ const RechargeWindow = () => {
                 great_grand_parent_id: userDetails.great_grand_parent_id ? userDetails.great_grand_parent_id : ''
             }).then((response) => {
                 console.log(response.data);
-                if(response.data.message==='refno already exists') {
+                if (response.data.message === 'refno already exists') {
                     toaster('RefNo already exists');
                     setRefno('');
                     console.log('RefNo already exists');
-                }else {
+                } else {
                     toaster('Request Placed Successfully!', '/record');
                     setRefno('');
                     console.log('Recharge placed successfully!');
@@ -108,13 +108,20 @@ const RechargeWindow = () => {
                 <div className='font-semibold text-red-500 py-2 text-center w-full'>or directly transfer to under UPI</div>
                 <div className="flex gap-2 items-center w-full justify-center px-4">
                     <div className='border-gray-400 border-[1px] rounded-lg bg-gray-100 py-3 px-2 w-3/4 text-gray-600'>
-                    ${amountDetails.upi_id}
+                        ${amountDetails.upi_id}
                     </div>
                     <CopyToClipboard text={`${amountDetails.upi_id}`} onCopy={() => toaster('copy succeded')}>
-                        <div 
-                        className='w-1/4 text-sm px-2 text-center py-3 text-blue-800 cursor-pointer border border-blue-800 rounded-md'>
+                        <div
+                            className='w-1/4 text-sm px-2 text-center py-3 text-blue-800 cursor-pointer border border-blue-800 rounded-md'>
                             Copy</div>
                     </CopyToClipboard>
+
+                </div>
+                <div className='flex flex-col px-4 gap-1 border-b border-gray-100'>
+                    {/* <div className='text-sm border-y-2 border-gray-50 py-3 tl'><span >Step 2: Submit Ref No/Reference No/UTR </span></div> */}
+                    <input value={refno} onChange={e => setRefno(e.target.value)} type="text" 
+                    placeholder='Input 12-digit here' className=' tp pt-4' />
+                    <div className='tt text-xs mb-3'>Generally, your transfer will be confirmed within 10 minutes.</div>
                 </div>
             </div>
 

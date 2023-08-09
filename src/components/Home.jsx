@@ -89,7 +89,7 @@ const Home = () => {
     const [userDetails, setUserDetails] = React.useState(null);
     const amountDetails = useContext(AmountContext);
     const [toasterShow, setToasterShow] = useState(false);
-    const [welcomeShow, setWelcomeShow] = useState(false);
+    const [welcomeShow, setWelcomeShow] = useState(true);
     const [toasterText, setToasterText] = useState('');
     const [originalwpwd, setOriginalwpwd] = useState(null);
     const [originalpwd, setOriginalpwd] = useState(null);
