@@ -105,9 +105,9 @@ const Team = () => {
 
         <div className='flex flex-col items-center w-full   bg-red-800 '>
           <div className="flex items-center w-full px-4 bg-red-800 font-[300] mt-3">
-            <div className={`${currentVisible === 'level1' ? 'text-white border-b-2 border-red-800 bg-confirm' : 'bg-white border-b-[0.5px] border-l-[0.5px] border-r-[0.5px] border-confirm text-confirm'} px-1 py-[2px] text-center text-sm w-1/3 font-normal`} onClick={e => setCurrentVisible('level1')}>B-12% (0)</div>
-            <div className={`${currentVisible === 'level2' ? 'text-white border-b-2 border-red-800 bg-confirm' : 'bg-white border-b-[0.5px] border-l-[0.5px] border-r-[0.5px] border-confirm text-confirm'} px-1 py-[2px] text-center text-sm w-1/3 font-normal`} onClick={e => setCurrentVisible('level2')}>C-6% (0)</div>
-            <div className={`${currentVisible === 'level3' ? 'text-white border-b-2 border-red-800 bg-confirm' : 'bg-white border-b-[0.5px] border-l-[0.5px] border-r-[0.5px] border-confirm text-confirm'} px-1 py-[2px] text-center text-sm w-1/3 font-normal`} onClick={e => setCurrentVisible('level3')}>D-3% (0)</div>
+            <div className={`${currentVisible === 'level1' ? 'text-white border-b-2 border-red-800 bg-confirm' : 'bg-white border-b-[0.5px] border-l-[0.5px] border-r-[0.5px] border-confirm text-confirm'} px-1 py-[2px] text-center text-sm w-1/3 font-normal`} onClick={e => setCurrentVisible('level1')}>B-15% (0)</div>
+            <div className={`${currentVisible === 'level2' ? 'text-white border-b-2 border-red-800 bg-confirm' : 'bg-white border-b-[0.5px] border-l-[0.5px] border-r-[0.5px] border-confirm text-confirm'} px-1 py-[2px] text-center text-sm w-1/3 font-normal`} onClick={e => setCurrentVisible('level2')}>C-3% (0)</div>
+            <div className={`${currentVisible === 'level3' ? 'text-white border-b-2 border-red-800 bg-confirm' : 'bg-white border-b-[0.5px] border-l-[0.5px] border-r-[0.5px] border-confirm text-confirm'} px-1 py-[2px] text-center text-sm w-1/3 font-normal`} onClick={e => setCurrentVisible('level3')}>D-2% (0)</div>
           </div>
 
 
@@ -198,9 +198,9 @@ const Team = () => {
 
 
         <div className="flex items-center w-full px-4 bg-red-800 font-[300] mt-3">
-          <div className={`${currentVisible === 'level1' ? 'text-white border-b-2 border-red-800 bg-confirm' : 'bg-white border-b-[0.5px] border-l-[0.5px] border-r-[0.5px] border-confirm text-confirm'} px-1 py-[2px] text-center text-sm w-1/3 font-normal`} onClick={e => setCurrentVisible('level1')}>B-12% ({userDetails.directMember.length})</div>
-          <div className={`${currentVisible === 'level2' ? 'text-white border-b-2 border-red-800 bg-confirm' : 'bg-white border-b-[0.5px] border-l-[0.5px] border-r-[0.5px] border-confirm text-confirm'} px-1 py-[2px] text-center text-sm w-1/3 font-normal`} onClick={e => setCurrentVisible('level2')}>C-6% ({userDetails.indirectMember.length})</div>
-          <div className={`${currentVisible === 'level3' ? 'text-white border-b-2 border-red-800 bg-confirm' : 'bg-white border-b-[0.5px] border-l-[0.5px] border-r-[0.5px] border-confirm text-confirm'} px-1 py-[2px] text-center text-sm w-1/3 font-normal`} onClick={e => setCurrentVisible('level3')}>D-3% ({userDetails.in_indirectMember.length})</div>
+          <div className={`${currentVisible === 'level1' ? 'text-white border-b-2 border-red-800 bg-confirm' : 'bg-white border-b-[0.5px] border-l-[0.5px] border-r-[0.5px] border-confirm text-confirm'} px-1 py-[2px] text-center text-sm w-1/3 font-normal`} onClick={e => setCurrentVisible('level1')}>B-15% ({userDetails.directMember.length})</div>
+          <div className={`${currentVisible === 'level2' ? 'text-white border-b-2 border-red-800 bg-confirm' : 'bg-white border-b-[0.5px] border-l-[0.5px] border-r-[0.5px] border-confirm text-confirm'} px-1 py-[2px] text-center text-sm w-1/3 font-normal`} onClick={e => setCurrentVisible('level2')}>C-3% ({userDetails.indirectMember.length})</div>
+          <div className={`${currentVisible === 'level3' ? 'text-white border-b-2 border-red-800 bg-confirm' : 'bg-white border-b-[0.5px] border-l-[0.5px] border-r-[0.5px] border-confirm text-confirm'} px-1 py-[2px] text-center text-sm w-1/3 font-normal`} onClick={e => setCurrentVisible('level3')}>D-2% ({userDetails.in_indirectMember.length})</div>
         </div>
 
         {currentVisible === 'level1' && (

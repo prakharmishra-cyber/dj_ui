@@ -361,15 +361,15 @@ const Home = () => {
                 <div className="bg-white rounded-md flex flex-col gap-3 p-3 mt-3">
                     <div className='flex flex-row justify-between items-center '>
                         <div className="opacity-70 text-center bg-[#f2f2f2] w-[30%] flex flex-col items-center justify-center">
-                            <div>B-12%</div>
+                            <div>B-15%</div>
                             <div>{userDetails?.directMember.length}</div>
                         </div>
                         <div className="opacity-70 text-center bg-[#f2f2f2] w-[30%] flex flex-col items-center justify-center">
-                            <div>C-6%</div>
+                            <div>C-3%</div>
                             <div>{userDetails?.indirectMember.length}</div>
                         </div>
                         <div className="opacity-70 text-center bg-[#f2f2f2] w-[30%] flex flex-col items-center justify-center">
-                            <div>D-3%</div>
+                            <div>D-2%</div>
                             <div>{userDetails?.in_indirectMember.length}</div>
                         </div>
                     </div>
