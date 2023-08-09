@@ -281,7 +281,7 @@ const Home = () => {
 
             <div>
                 <ReactModal
-                    isOpen={welcomeShow}
+                    isOpen={false}
                     style={customStyles2}
                     contentLabel="Notice"
                     ariaHideApp={false}>
