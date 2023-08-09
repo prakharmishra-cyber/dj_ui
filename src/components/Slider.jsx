@@ -14,6 +14,11 @@ import lenscart_slide5 from '../images/lenscart_slide5.gif'
 import asset11 from '../images/asml/asset 11.jpeg';
 import asset12 from '../images/asml/asset 12.jpeg';
 
+import s1 from '../images/dj/slide1.jpg';
+import s2 from '../images/dj/slide2.jpg';
+import s3 from '../images/dj/slide3.jpg';
+import s4 from '../images/dj/slide4.jpg';
+
 import slide1 from '../images/dj/slide1.png';
 import slide2 from '../images/asml/slide2.jpg';
 import slide3 from '../images/asml/slide3.jpg';
@@ -37,19 +42,19 @@ const Slider = () => {
         </div> */}
         <Carousel showThumbs={false} autoPlay showArrows={true} infiniteLoop statusFormatter={()=>''}>
         <div>
-          <img src={slide1} className="h-[190px] rounded-md" alt="img_2" />
+          <img src={s1} className="h-[190px] rounded-md" alt="img_2" />
         </div>
 
         <div>
-          <img src={slide1} className="h-[190px] rounded-md" alt="img_1" />
+          <img src={s2} className="h-[190px] rounded-md" alt="img_1" />
         </div>
 
         <div>
-          <img src={slide1} className="h-[190px] rounded-md" alt="img_1" />
+          <img src={s3} className="h-[190px] rounded-md" alt="img_1" />
         </div>
 
         <div>
-          <img src={slide1} className="h-[190px] rounded-md" alt="img_1" />
+          <img src={s4} className="h-[190px] rounded-md" alt="img_1" />
         </div>
 
       </Carousel>

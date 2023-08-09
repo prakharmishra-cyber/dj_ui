@@ -16,7 +16,7 @@ const Card = ({ pre_sale, long_plan_state, product_type, product_image, plan_nam
     <div className='ml-1 mt-1  bg-white shadow-ceatShadow3 p-1 rounded-md' >
       {/* <div className="title text-[#464945] font-bold text-lg">{plan_name}</div>         */}
       <div className="info text-xs flex flex-col items-center">
-        <img src={powerbank} alt="comp_img" className=' h-[160px] w-full mb-1' />
+        <img src={product_image} alt="comp_img" className=' h-[160px] w-full mb-1' />
         <div className="title text-black w-full px-1 ml-1 text-left text-lg">{plan_name}</div>
         {/* {product_type === 'long' && (<div className="text-xs font-black text-center px-1 ml-1 w-full  text-red-800 ">Daily Income, Daily Withdrawals</div>)} */}
         {/* {product_type==='short' && (<div className="text-xs p-1 w-full  text-red-500 font-extrabold">Daily Income, Daily Withdrawals</div>)} */}

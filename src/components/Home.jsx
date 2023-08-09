@@ -503,7 +503,7 @@ const Home = () => {
             </div> */}
 
             <div className='flex mt-2 items-center  mb-2 sm:w-4/5 lg:w-4/5 mx-1'>
-                <video controls src={"https://www.djioff.co/public/video/1.mp4?v=1.0"} disablepictureinpicture={""} controlslist={"nodownload noplaybackrate "}></video>
+                <video controls src={"https://youtu.be/j2IReRTRDrk"} className='w-full' disablePictureInPicture={""} controlsList={"nodownload noplaybackrate "}></video>
             </div>
 
             <div className="flex justify-between items-center mt-2 sm:w-4/5 lg:w-4/5 mx-1">
