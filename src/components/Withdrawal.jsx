@@ -167,7 +167,7 @@ const Withdrawal = () => {
     }
 
     const isBetween = () => {
-        var startTime = '9:00:00';
+        var startTime = '8:00:00';
         var endTime = '18:00:00';
 
         var currentDate = new Date()
