@@ -65,7 +65,7 @@ const Invite = () => {
                 <div className="flex flex-col py-5 text-black  justify-center items-center gap-2 bg-white mx-2 rounded-md text-sm mt-4">
                 <div className='flex flex-col gap-1 items-center p-2'>
                     <div className='text-lg'>Invitation code</div>
-                    <div className='font-bold font-md'>{userDetails.user_invite}</div>
+                    <div className='font-bold font-md'>{''}</div>
                 </div>
 
                 <div className='flex flex-col gap-1 items-center p-2'>
