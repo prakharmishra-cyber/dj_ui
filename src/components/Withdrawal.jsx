@@ -324,7 +324,7 @@ const Withdrawal = () => {
                 <div className='text-gray-500 font-medium'><br />
                     1: Valid members can apply for withdrawal. The number of withdrawals is unlimited. The minimum withdrawal amount is 120rs.<br />
                     2: IFSC should be 11 characters and 5th character should be 0. If you fill in wrong bank information, your withdrawal will fail.<br />
-                    3: Withdrawal fee: 7%<br />
+                    3: Withdrawal fee: 10%<br />
                     4: Withdrawal time: 1-2 days
                 </div>
                 {/* <div className='text-gray-500 font-medium'>* Withdrawal time 09:00 - 18:00</div>
