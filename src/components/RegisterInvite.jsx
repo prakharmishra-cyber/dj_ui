@@ -162,7 +162,7 @@ const Register = () => {
             </div>
             <div className=" box mb-20 gap-2 m-auto  rounded-xl lg:w-2/5 w-[95%] p-4 flex flex-col">
                 <div className='outline-none flex items-center justify-between mb-2 rounded-md bg-white'>
-                    <div className='flex flex-row items-center py-[10px] w-[35%] gap-2 justify-center'>
+                    <div className='flex text-xs flex-row items-center py-[10px] w-[35%] gap-2 justify-center'>
                         <div>
                             <img src={mobile} className='w-5 h-5' />
                         </div>

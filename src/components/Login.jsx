@@ -111,7 +111,7 @@ const Login = () => {
             <div className='flex flex-col m-auto w-[86%] gap-2'>
                 
             <div className='outline-none flex items-center justify-between mb-2 py-1 px-1 rounded-md bg-white'>
-                    <div className='flex flex-row text-sm items-center py-[10px] w-[35%] gap-2 justify-center'>
+                    <div className='flex flex-row text-xs items-center py-[10px] w-[35%] gap-2 justify-center'>
                         <div>
                             <img src={mobile} className='w-5 h-5' />
                         </div>
