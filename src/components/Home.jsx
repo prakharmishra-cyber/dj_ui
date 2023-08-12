@@ -352,6 +352,14 @@ const Home = () => {
                     </div>
 
 
+
+                    <a href="https://telegram.me/hkvitals" className='no-underline text-black'>
+                        <div className='cursor-pointer mx-2 flex flex-col justify-center items-center'>
+                            <img src={telegram} alt="channel" className='w-10' />
+                            <div className='text-[12px] text-black opacity-60 mt-1'>My teams</div>
+                        </div>
+                    </a>
+
                     <div onClick={() => navigate('/rewards')} className='cursor-pointer mx-2 flex flex-col justify-center items-center'>
                         <img src={bonus} alt="online" className='w-10' />
                         <div className='text-[12px] text-black opacity-60 mt-1 '>bonus</div>
