@@ -16,8 +16,7 @@ import asset5 from '../images/asml/asset 5.png';
 import asset6 from '../images/asml/asset 6.png';
 import asset7 from '../images/asml/asset 7.png';
 import asset8 from '../images/asml/asset 8.png';
-import boat_logo from '../images/asml/boat/boat_logo.jpg';
-
+import boat_logo from '../images/dj/register_logo.png';
 
 
 const Team = () => {

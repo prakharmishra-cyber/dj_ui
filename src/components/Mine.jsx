@@ -45,7 +45,7 @@ import personal_information from '../images/asml/personal_information.png';
 import ceat_company from '../images/asml/ceat_company.png';
 import app_download from '../images/asml/app_download.png';
 import plan_details from '../images/asml/plan_details.png';
-import register_logo from '../images/dj/me_register_logo.png';
+
 import setting_top from '../images/dj/setting.png';
 import projects_me from '../images/dj/projects_me.png';
 import bind_bank_account from '../images/dj/bind_bank_account.png';
@@ -57,7 +57,7 @@ import home from '../images/dj/normal_home.png';
 import company from '../images/dj/company.png';
 import me from '../images/dj/me_page_image.png';
 import project from '../images/dj/Project.png';
-
+import register_logo from '../images/dj/register_logo.png';
 
 const customStyles2 = {
   content: {
@@ -295,7 +295,7 @@ const Mine = () => {
           <div><img src={setting_top} alt="setting_image" className='w-7 h-7' /></div>
         </div>
         <div className='flex flex-col justify-start items-center px-3 pb-3'>
-          <img src={register_logo} alt="wind_login" width={75} className="pb-1 rounded-full" />
+          <img src={register_logo} alt="wind_login" width={125} className="pb-1 rounded-full" />
           <div className='text-[20px] font-semibold text-white'>{''}
             {/* <span className='border border-red-700 px-1 text-red-700 rounded-xl text-xs'>LV0</span> */}
           </div>
@@ -616,7 +616,7 @@ const Mine = () => {
           <div><img src={setting_top} alt="setting_image" className='w-7 h-7' /></div>
         </div>
         <div className='flex flex-col justify-start items-center px-3 pb-3'>
-          <img src={register_logo} alt="wind_login" width={75} className="pb-1 rounded-full" />
+          <img src={register_logo} alt="wind_login" width={125} className="pb-1 rounded-full" />
           <div className='text-[20px] font-semibold text-white'>91{mobileno}
             {/* <span className='border border-red-700 px-1 text-red-700 rounded-xl text-xs'>LV0</span> */}
           </div>

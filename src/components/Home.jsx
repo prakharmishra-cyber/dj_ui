@@ -42,6 +42,7 @@ import home from '../images/dj/Home.png';
 import company from '../images/dj/company.png';
 import me from '../images/dj/me.png';
 import project from '../images/dj/Project.png';
+import myteams_home from '../images/dj/myteams.png';
 
 
 const customStyles = {
@@ -346,7 +347,7 @@ const Home = () => {
 
 
                     <div onClick={() => navigate('/team')} className='cursor-pointer mx-2 flex flex-col justify-center items-center'>
-                        <img src={telegram} alt="channel" className='w-10' />
+                        <img src={myteams_home} alt="channel" className='w-10' />
                         <div className='text-[12px] text-black opacity-60 mt-1'>My teams</div>
                     </div>
 
