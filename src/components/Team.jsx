@@ -203,34 +203,27 @@ const Team = () => {
         </div>
 
         {currentVisible === 'level1' && (
-          <div className='flex text-red-800 items-center font-semibold flex-col w-full  text-lg  mt-0'>
+          <div className='flex text-red-800 items-center justify-center font-semibold flex-col w-full  text-lg  mt-0'>
             {/* <div className='flex flex-col w-full'>
               <div>Level 1 Member: {userDetails.directMember.length}</div>
               <div>Level 1 Earning: &#8377;{(userDetails.directRecharge) * (amountDetails.level1_percent / 100)}</div>
             </div> */}
+
+            <div className="flex justify-center ml-4 items-center text-gray-400 font-normal text-sm w-full my-2">
+              <div className='w-1/3'>Account</div>
+              <div className='w-1/3'>Level</div>
+              <div className='w-1/3'>Registration time</div>
+            </div>
 
             {level1.length === 0 ? (<div className='text-center text-gray-400 font-medium mt-5 text-sm'>No record</div>) : null}
 
             {/*{Math.max(0,element.recharge_amount + element.earning - element.balance)} */}
             {level1.map((element, index) => {
               return (
-                <div key={index} className='flex flex-col font-semibold justify-between w-full border leading-3 border-gray-300 text-[10px] py-4 px-2'>
-                  <div className='flex items-start gap-3 w-full'>
-                    <img src={boat_logo} alt="turbo_logo" width={70} className='m-1' />
-                    <div className='text-sky-500 flex flex-col'>
-                      <div className='text-gray-700'>Name: {String(element.mobno).substring(0, 3) + "****" + String(element.mobno).substring(7)}</div>
-                      <div>Recharge: {userTotalPlanBalance(element)}</div>
-                      <div>withdraw:
-                        {element.withdrawal_sum}
-                      </div>
-                    </div>
-                    <div className='flex flex-col  items-end flex-grow'>
-                      <div className='text-sky-500'>phone: {String(element.mobno).substring(0, 3) + "****" + String(element.mobno).substring(7)}</div>
-                      <div className='text-sky-500 font-medium'>Recommended number: {(element.directMember.length + element.indirectMember.length + element.in_indirectMember.length)}</div>
-                      <div className='text-sky-500'>Registration time: {new Date(element.time).getDate() + '-' + new Date(element.time).getMonth() + '-' + new Date(element.time).getFullYear()}</div>
-                      <div className='text-right text-sky-500'>{new Date(element.time).getHours() + ":" + new Date(element.time).getMinutes() + ":" + new Date(element.time).getSeconds()}</div>
-                    </div>
-                  </div>
+                <div className="flex justify-center mx-6 my-1 items-center text-gray-800 font-normal text-sm py-2 px-2 shadow-md rounded-md  w-full" key={index}>
+                  <div className='w-1/3'>{element.mobno}</div>
+                  <div className='w-1/3'>B</div>
+                  <div className='w-1/3'>{new Date(element.time).toDateString()}</div>
                 </div>
               )
             })}
@@ -244,26 +237,21 @@ const Team = () => {
               <div>Level 2 Earning: &#8377;{(userDetails.indirectRecharge) * (amountDetails.level2_percent / 100)}</div>
             </div> */}
 
+            <div className="flex justify-center ml-4 items-center text-gray-400 font-normal text-sm w-full my-2">
+              <div className='w-1/3'>Account</div>
+              <div className='w-1/3'>Level</div>
+              <div className='w-1/3'>Registration time</div>
+            </div>
+
             {level2.length === 0 ? (<div className='text-center text-gray-400 font-medium mt-5 text-sm'>No record</div>) : null}
 
 
             {level2.map((element, index) => {
               return (
-                <div key={index} className='flex flex-col font-semibold justify-between w-full border border-gray-300  text-[10px] leading-3 py-4 px-2'>
-                  <div className='flex items-start gap-3 w-full'>
-                    <img src={boat_logo} alt="turbo_logo" width={80} className='m-1' />
-                    <div className='text-sky-500 flex flex-col'>
-                      <div className='text-gray-700'>Name: {String(element.mobno).substring(0, 3) + "****" + String(element.mobno).substring(7)}</div>
-                      <div>Recharge: {userTotalPlanBalance(element)}</div>
-                      <div>withdraw: {element.withdrawal_sum}</div>
-                    </div>
-                    <div className='flex flex-col items-end flex-grow'>
-                      <div className='text-sky-500'>phone: {String(element.mobno).substring(0, 3) + "****" + String(element.mobno).substring(7)}</div>
-                      <div className='text-sky-500 font-medium'>Recommended number: {(element.directMember.length + element.indirectMember.length + element.in_indirectMember.length)}</div>
-                      <div className='text-sky-500'>Registration time: {new Date(element.time).getDate() + '-' + new Date(element.time).getMonth() + '-' + new Date(element.time).getFullYear()}</div>
-                      <div className='text-right text-sky-500'>{new Date(element.time).getHours() + ":" + new Date(element.time).getMinutes() + ":" + new Date(element.time).getSeconds()}</div>
-                    </div>
-                  </div>
+                <div className="flex justify-center mx-6 my-1 items-center text-gray-800 font-normal text-sm py-2 px-2 shadow-md rounded-md  w-full" key={index}>
+                  <div className='w-1/3'>{element.mobno}</div>
+                  <div className='w-1/3'>C</div>
+                  <div className='w-1/3'>{new Date(element.time).toDateString()}</div>
                 </div>
               )
             })}
@@ -276,26 +264,23 @@ const Team = () => {
               <div>Level 3 Member: {userDetails.in_indirectMember.length}</div>
               <div>Level 3 Earning: &#8377;{(userDetails.in_indirectRecharge) * (amountDetails.level3_percent / 100)}</div>
             </div> */}
+            <div className="flex justify-center ml-4 items-center text-gray-400 font-normal text-sm w-full my-2">
+              <div className='w-1/3'>Account</div>
+              <div className='w-1/3'>Level</div>
+              <div className='w-1/3'>Registration time</div>
+            </div>
 
             {level3.length === 0 ? (<div className='text-center text-gray-400  font-medium mt-5 text-sm'>No record</div>) : null}
 
+            
+
+
             {level3.map((element, index) => {
               return (
-                <div key={index} className='flex flex-col font-semibold justify-between w-full border border-gray-300 leading-3 text-[10px] py-4 px-2'>
-                  <div className='flex items-start gap-3 w-full'>
-                    <img src={boat_logo} alt="turbo_logo" width={80} className='m-1' />
-                    <div className='text-sky-500 flex flex-col'>
-                      <div className='text-gray-700'>Name: {String(element.mobno).substring(0, 3) + "****" + String(element.mobno).substring(7)}</div>
-                      <div>Recharge: {userTotalPlanBalance(element)}</div>
-                      <div>withdraw: {element.withdrawal_sum}</div>
-                    </div>
-                    <div className='flex flex-col  items-end flex-grow'>
-                      <div className='text-sky-500'>phone: {String(element.mobno).substring(0, 3) + "****" + String(element.mobno).substring(7)}</div>
-                      <div className='text-sky-500 font-medium'>Recommended number: {(element.directMember.length + element.indirectMember.length + element.in_indirectMember.length)}</div>
-                      <div className='text-sky-500'>Registration time: {new Date(element.time).getDate() + '-' + new Date(element.time).getMonth() + '-' + new Date(element.time).getFullYear()}</div>
-                      <div className='text-right text-sky-500'>{new Date(element.time).getHours() + ":" + new Date(element.time).getMinutes() + ":" + new Date(element.time).getSeconds()}</div>
-                    </div>
-                  </div>
+                <div className="flex justify-center mx-6 my-1 items-center text-gray-800 font-normal text-sm py-2 px-2 shadow-md rounded-md  w-full" key={index}>
+                  <div className='w-1/3'>{element.mobno}</div>
+                  <div className='w-1/3'>D</div>
+                  <div className='w-1/3'>{new Date(element.time).toDateString()}</div>
                 </div>
               )
             })}
