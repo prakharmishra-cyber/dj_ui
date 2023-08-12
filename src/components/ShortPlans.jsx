@@ -143,7 +143,7 @@ const ShortPlans = () => {
                     setBalanceIndicator(false);
                 }, 3000);
             }
-            else if(userDetails.plans_purchased.filter(e=>e.plan_name==='HR Vitals 1').length>0) {
+            else if(userDetails.plans_purchased.filter(e=>e.plan_name==='HR Vitals 1').length>0 && currPlan.plan_name==='HR Vitals 1') {
                 setIsOpen(false);
                 toaster('You can only purchase this plan once');
                 return;
@@ -209,8 +209,8 @@ const ShortPlans = () => {
 
     return (
         <div className='relative bg-red-800'>
-            {toasterShow ? <div className='w-[90%] absolute z-50 top-[450px] left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-                <div className='flex gap-2 bg-black opacity-80 justify-center text-white px-2 py-1 rounded-md'>
+            {toasterShow ? <div className='w-[50%] absolute z-5 top-[450px] left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+                <div className='flex gap-2 bg-black opacity-80 text-center justify-center text-white px-2 py-1 rounded-md'>
                     <div>{toasterText}</div>
                 </div>
             </div> : null}
