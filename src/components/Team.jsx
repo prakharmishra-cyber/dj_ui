@@ -100,7 +100,10 @@ const Team = () => {
         </div>
 
 
-        <div className="w-full text-center font-bold bg-red-800">Total: {0}</div>
+        <div className="flex w-full items-center justify-between">
+        <div className="px-3 text-center font-bold">Total: {0}</div>
+        <div className="px-3 text-center font-bold">Total Recharge: {0}</div>      
+      </div>
 
         <div className='flex flex-col items-center w-full   bg-red-800 '>
           <div className="flex items-center w-full px-4 bg-red-800 font-[300] mt-3">
@@ -190,8 +193,12 @@ const Team = () => {
           <div className='text-[#4169e1] text-xl mt-1'>{Math.floor(userDetails.directMember.length + userDetails.indirectMember.length + userDetails.in_indirectMember.length)}</div>
         </div>
       </div> */}
+      <div className="flex  items-center justify-between w-full">
+        <div className="px-3 text-center font-bold">Total: {Math.floor(userDetails.directMember.length + userDetails.indirectMember.length + userDetails.in_indirectMember.length)}</div>
+        <div className="px-3 text-center font-bold">Total Recharge: {Math.floor(userDetails.directRecharge + userDetails.indirectRecharge + userDetails.in_indirectRecharge)}</div>      
+      </div>
 
-      <div className="w-full text-center font-bold">Total: {Math.floor(userDetails.directMember.length + userDetails.indirectMember.length + userDetails.in_indirectMember.length)}</div>
+
 
       <div className='flex flex-col items-center w-full   bg-red-800 '>
 
@@ -272,7 +279,7 @@ const Team = () => {
 
             {level3.length === 0 ? (<div className='text-center text-gray-400  font-medium mt-5 text-sm'>No record</div>) : null}
 
-            
+
 
 
             {level3.map((element, index) => {
